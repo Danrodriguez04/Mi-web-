@@ -5,43 +5,45 @@
     <link rel="stylesheet" href="./estilo/general.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Document</title>
+    <title>Indice</title>
     <style>
 
     </style>
 </head>
 
 <body>
-    <div class="posicion">
-        <div class="left" style="background-color: burlywood;">
-            <input type="text" id=" Searcher" onkeyup="funcion()" placeholder="Buscar">
-            <ul id="Buscador">
-                <li><a class="INICI" href="./index.html">INICIO</a></li>
-                <li><a href="#">Introducción</a></li>
-                <li><a href="#">Pianistas</a></li>
-                <li><a href="#">Introducción</a></li>
-                <li><a href="#">Introducción</a></li>
-                <li><a href="#">Introducción</a></li>
-            </ul>
+
+    <div id="abrirnav" class="sidenav">
+        <a href="javascript:void(0)" class="close" onclick="closeNav()">&times;</a>
+        <a class="INICI" href="./index.html">INICIO</a>
+        <a href="./paginas/Introduccion.html">Introducción</a>
+        <a href="./paginas/pianistas.html">Pianistas</a>
+        <a href="./paginas/Yiruma.html">Introducción</a>
+        <a href="#">Introducción</a>
+        <a href="#">Introducción</a>
+    </div>
+
+    <div id="menu">
+        <h1>Grandes Pianistas</h1>
+        <span style="font-size: 30px;cursor:pointer" onclick="openNav()">&#9776;Menú</span>
+        <h1>Grandes Pianistas</h1>
         </div>
-        <div class="right" style="background-color: chocolate;"></div>
-        <script>
-            function Funcion() {
-                var input, filter, ul, li, a, i;
-                input = document.getElementById("Searcher");
-                filter = input.value.toUpperCase();
-                ul = document.getElementById("Buscador");
-                li = ul.getElementsByTagName("li");
-                for (i = 0; i < li.length; i++) {
-                    a = li[i].getElementsByTagName("a")[0];
-                    if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
-                        li[i].style.display = "";
-                    } else {
-                        li[i].style.display = "none";
-                    }
-                }
-            }
-        </script>
+
+
+    <script>
+        function openNav() {
+            document.getElementById("abrirnav").style.width = "250px";
+            document.getElementById("menu").style.marginLeft = "250px";
+            document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+        }
+
+        function closeNav() {
+            document.getElementById("abrirnav").style.width = "0";
+            document.getElementById("menu").style.marginLeft = "0";
+            document.body.style.backgroundColor = "white";
+        }
+    </script>
+
 </body>
 
 </html>

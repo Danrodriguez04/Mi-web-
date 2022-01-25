@@ -1,69 +1,66 @@
-body {
-    margin: 0;
-}
-
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    width: 25%;
-    background-color: rgb(110, 108, 108);
-    position: fixed;
-    height: 100%;
-    overflow: auto;
-}
-
-li a {
-    display: block;
-    color: white;
-    padding: 8px;
-    text-decoration: none;
-}
-
-li a.INICI {
-    background-color: rgb(68, 66, 66);
-    color: white;
-    text-align: center;
-}
-
-#searcher {
+header {
+    background-image:url(/imatges/encabezado.jpg) no-repeat center center fixed;
+    background-size: cover;
+    height: 100px;
     width: 100%;
-    font-size: 18px;
-    padding: 11px;
-    border: 1px solid rgb(194, 70, 70);
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+body {
+    font-family: "Lato", sans-serif;
+    transition: background-color .5s;
 }
 
-#Buscador {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    
+    left: 0;
+    background-color: rgb(119, 213, 236);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
 }
 
-#Buscador li a {
-    padding: 12px;
+.sidenav a {
+    padding: 8px 8px 8px 32px;
     text-decoration: none;
-    color: rgb(250, 252, 252);
+    font-size: 25px;
+    color: #000000;
     display: block;
+    transition: 0.3s;
 }
 
-#Buscador li a:hover {
-    background-color: rgb(77, 211, 226);
+.sidenav a:hover {
+    color: #f1f1f1;
 }
 
-.posicion {
-    display: flex;
+.sidenav .closebtn {
+    position: absolute;
+   
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
 }
 
-.left {
-    flex: 35%;
-    padding: 15px 0;
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
 }
 
-.right {
-    flex: 65%;
-    padding: 15px;
+@media screen and (max-height: 450px) {
+    .sidenav {
+       
+    }
+
+    .sidenav a {
+        font-size: 18px;
+    }
 }
 
-* {
-    box-sizing: border-box;
+a .INICI {
+    text-align: center;
 }
