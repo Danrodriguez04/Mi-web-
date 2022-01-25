@@ -1,0 +1,69 @@
+body {
+    margin: 0;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 25%;
+    background-color: rgb(110, 108, 108);
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+}
+
+li a {
+    display: block;
+    color: white;
+    padding: 8px;
+    text-decoration: none;
+}
+
+li a.INICI {
+    background-color: rgb(68, 66, 66);
+    color: white;
+    text-align: center;
+}
+
+#searcher {
+    width: 100%;
+    font-size: 18px;
+    padding: 11px;
+    border: 1px solid rgb(194, 70, 70);
+}
+
+#Buscador {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#Buscador li a {
+    padding: 12px;
+    text-decoration: none;
+    color: rgb(250, 252, 252);
+    display: block;
+}
+
+#Buscador li a:hover {
+    background-color: rgb(77, 211, 226);
+}
+
+.posicion {
+    display: flex;
+}
+
+.left {
+    flex: 35%;
+    padding: 15px 0;
+}
+
+.right {
+    flex: 65%;
+    padding: 15px;
+}
+
+* {
+    box-sizing: border-box;
+}
